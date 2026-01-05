@@ -1,0 +1,13 @@
+# Dockerignore - root level
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+*.md
+.vscode
+.idea
+frontend
+backend/node_modules
+backend/dist
+backend/data/*.json

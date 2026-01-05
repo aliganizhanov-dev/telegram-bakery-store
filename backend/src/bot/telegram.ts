@@ -19,6 +19,11 @@ export class TelegramBotHandler {
     this.bot.onText(/\/start/, (msg) => {
       const chatId = msg.chat.id;
       const firstName = msg.from?.first_name || 'Do\'kon mijozi';
+      const userId = msg.from?.id;
+
+      // Log user ID for debugging
+      console.log(`👤 User started bot: ${firstName} (ID: ${userId})`);
+      console.log(`🔐 Admin ID: ${this.adminId}, User ID: ${userId}, Match: ${userId?.toString() === this.adminId}`);
 
       const keyboard = {
         inline_keyboard: [
