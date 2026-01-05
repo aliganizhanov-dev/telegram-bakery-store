@@ -1,6 +1,7 @@
 import { Product, Order } from '../types';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://telegram-bakery-store.onrender.com/api';
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://telegram-bakery-store.onrender.com';
+const API_URL = BASE_URL.endsWith('/api') ? BASE_URL : `${BASE_URL}/api`;
 
 // Mahsulotlarni olish
 export const getProducts = async (): Promise<Product[]> => {
