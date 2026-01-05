@@ -1,0 +1,27 @@
+services:
+  # Backend Service
+  - type: web
+    name: telegram-store-backend
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: ADMIN_TELEGRAM_ID
+        sync: false
+      - key: PORT
+        value: 3000
+      - key: WEB_APP_URL
+        value: https://telegram-store-frontend.onrender.com
+    
+  # Frontend Service
+  - type: web
+    name: telegram-store-frontend
+    env: static
+    region: frankfurt
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
