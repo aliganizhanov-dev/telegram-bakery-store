@@ -1,0 +1,31 @@
+.admin-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.admin-page h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.admin-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-form-container h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
