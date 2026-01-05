@@ -1,4 +1,3 @@
-import React from 'react';
 import { Product } from '../types';
 import './ProductCard.css';
 
@@ -7,7 +6,7 @@ interface ProductCardProps {
   onAddToCart: () => void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
+export const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
   return (
     <div className="product-card">
       {product.image && (

@@ -1,4 +1,3 @@
-import React from 'react';
 import { CartItem } from '../types';
 import './Cart.css';
 
@@ -10,13 +9,13 @@ interface CartProps {
   totalPrice: number;
 }
 
-export const Cart: React.FC<CartProps> = ({
+export const Cart = ({
   items,
   onUpdateQuantity,
   onRemove,
   onCheckout,
   totalPrice,
-}) => {
+}: CartProps) => {
   if (items.length === 0) {
     return (
       <div className="empty-cart">
