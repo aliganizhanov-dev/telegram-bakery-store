@@ -1,0 +1,12 @@
+# Dockerignore - fayllarni build'dan chiqarish
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+README.md
+*.md
+.vscode
+.idea
+dist
+data/*.json
