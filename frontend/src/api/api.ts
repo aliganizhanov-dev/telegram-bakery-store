@@ -1,6 +1,6 @@
 import { Product, Order } from '../types';
 
-const API_URL = 'http://localhost:3000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://telegram-store-backend.onrender.com/api';
 
 // Mahsulotlarni olish
 export const getProducts = async (): Promise<Product[]> => {
