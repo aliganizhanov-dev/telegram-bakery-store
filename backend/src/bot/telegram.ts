@@ -67,6 +67,9 @@ export class TelegramBotHandler {
         case 'admin_panel':
           await this.handleAdminPanel(chatId, query.from.id);
           break;
+        case 'admin_orders':
+          await this.handleAdminOrders(chatId, query.from.id);
+          break;
         default:
           if (query.data?.startsWith('order_')) {
             await this.handleOrderDetails(chatId, query.data.replace('order_', ''));
@@ -169,6 +172,43 @@ export class TelegramBotHandler {
       `📦 Jami buyurtmalar: ${orders.length}\n` +
       `⏳ Kutilayotgan: ${pendingOrders}\n` +
       `🛍 Mahsulotlar: ${products.length}\n`,
+      { reply_markup: keyboard }
+    );
+  }
+
+  private async handleAdminOrders(chatId: number, userId: number) {
+    if (userId.toString() !== this.adminId) {
+      this.bot.sendMessage(chatId, '❌ Sizda admin huquqi yo\'q.');
+      return;
+    }
+
+    const orders = OrderModel.getAll();
+
+    if (orders.length === 0) {
+      this.bot.sendMessage(chatId, '📦 Hozircha buyurtmalar yo\'q.');
+      return;
+    }
+
+    const keyboard = {
+      inline_keyboard: orders.slice(0, 10).map(order => {
+        const statusEmoji = {
+          pending: '⏳',
+          confirmed: '✅',
+          delivered: '🎉',
+          cancelled: '❌'
+        };
+        
+        return [{
+          text: `${statusEmoji[order.status]} №${order.id.slice(0, 8)} - ${order.total_price} so'm`,
+          callback_data: `order_${order.id}`
+        }];
+      })
+    };
+
+    this.bot.sendMessage(
+      chatId,
+      `📦 Barcha buyurtmalar (${orders.length} ta):\n\n` +
+      `Buyurtmani ko'rish uchun birini tanlang:`,
       { reply_markup: keyboard }
     );
   }
