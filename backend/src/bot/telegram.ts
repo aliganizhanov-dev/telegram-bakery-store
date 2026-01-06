@@ -157,7 +157,7 @@ export class TelegramBotHandler {
         [
           {
             text: '➕ Mahsulot qo\'shish',
-            web_app: { url: `${this.webAppUrl}/admin` }
+            web_app: { url: `${this.webAppUrl}/#/admin` }
           }
         ],
         [
