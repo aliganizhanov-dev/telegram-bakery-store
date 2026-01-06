@@ -4,6 +4,9 @@ import { AdminPage } from './pages/AdminPage';
 import './App.css';
 
 function App() {
+  console.log('🚀 App loaded');
+  console.log('📱 Telegram WebApp:', window.Telegram?.WebApp);
+  
   return (
     <Router>
       <Routes>

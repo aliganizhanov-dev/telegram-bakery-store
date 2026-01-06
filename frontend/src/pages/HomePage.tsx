@@ -24,10 +24,12 @@ export const HomePage: React.FC = () => {
 
   const loadProducts = async () => {
     try {
+      console.log('📦 Loading products...');
       const data = await getProducts();
+      console.log('✅ Products loaded:', data);
       setProducts(data);
     } catch (error) {
-      console.error('Xato:', error);
+      console.error('❌ Error loading products:', error);
     } finally {
       setLoading(false);
     }
