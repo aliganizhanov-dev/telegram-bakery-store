@@ -67,7 +67,7 @@ git push -u origin main
    
    For the **backend** service, add these environment variables:
    ```
-   TELEGRAM_BOT_TOKEN=8566832958:AAGc7iNYASz5ulOHR9N4ONdFuLS3ASGbn5s
+   TELEGRAM_BOT_TOKEN=8386187963:AAGuxwEQxu9b_BtVuBQXF7MnQgHlweVKsMI
    ADMIN_TELEGRAM_ID=8566832958
    NODE_ENV=production
    ```
@@ -290,7 +290,7 @@ If you encounter issues:
 
 ---
 
-**Your Bot Token:** `8566832958:AAGc7iNYASz5ulOHR9N4ONdFuLS3ASGbn5s`  
+**Your Bot Token:** `8386187963:AAGuxwEQxu9b_BtVuBQXF7MnQgHlweVKsMI`  
 **Your Admin ID:** `8566832958`  
 **Bot Username:** @Zakaz_pishiriqlar_bot
 

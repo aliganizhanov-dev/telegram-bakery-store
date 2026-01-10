@@ -36,7 +36,7 @@ Instance Type: Free
 **"Advanced"** yoki **"Environment"** bo'limida qo'shing:
 
 ```
-TELEGRAM_BOT_TOKEN = 8566832958:AAGc7iNYASz5ulOHR9N4ONdFuLS3ASGbn5s
+TELEGRAM_BOT_TOKEN = 8386187963:AAGuxwEQxu9b_BtVuBQXF7MnQgHlweVKsMI
 ADMIN_TELEGRAM_ID = 8566832958
 NODE_ENV = production
 PORT = 3000

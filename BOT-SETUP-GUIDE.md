@@ -22,7 +22,7 @@ mening_dokonim_bot
 
 5. ✅ BotFather sizga **TOKEN** beradi. Masalan:
 ```
-6234567890:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw
+8386187963:AAGuxwEQxu9b_BtVuBQXF7MnQgHlweVKsMI
 ```
 
 ⚠️ **BU TOKENNI SAQLANG!** Bu botning paroli kabi.
@@ -54,7 +54,7 @@ nano .env
 Quyidagilarni yozing (o'z tokenlaringizni qo'ying):
 
 ```env
-TELEGRAM_BOT_TOKEN=6234567890:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw
+TELEGRAM_BOT_TOKEN=8386187963:AAGuxwEQxu9b_BtVuBQXF7MnQgHlweVKsMI
 PORT=3000
 WEB_APP_URL=http://localhost:5173
 ADMIN_TELEGRAM_ID=123456789

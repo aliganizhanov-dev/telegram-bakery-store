@@ -4,7 +4,7 @@ export const seedDatabase = () => {
   const products = ProductModel.getAll();
   
   // Agar mahsulotlar bo'lmasa, demo ma'lumotlar qo'shamiz
-  if (products.length === 0) {
+  if (products.length === 0) { 
     const demoProducts = [
       {
         name: '🍞 Oq Non',
